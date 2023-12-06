@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_error.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oseivane <oseivane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: osg <osg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 11:11:54 by oseivane          #+#    #+#             */
-/*   Updated: 2023/12/04 13:55:36 by oseivane         ###   ########.fr       */
+/*   Updated: 2023/12/06 19:07:52 by osg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,18 @@ int	ft_check_isrep(char **strarg)
 
 int	ft_check_isalpha(char *strarg)
 {
-	int		i;
-
-	i = 0;
-	while (strarg[i])
+	
+	while (*strarg)
 	{
-		if ((strarg[i] >= 'A' && strarg[i] <= 'Z')
-			|| (strarg[i] >= 'a' && strarg[i] <= 'z'))
+		if ((*strarg >= 'A' && *strarg <= 'Z')
+			|| (*strarg >= 'a' && *strarg <= 'z') || *strarg == '\0')
 		{
 			ft_error();
 			return (1);
 		}
-		i++;
+		strarg++;
 	}
-	return (strarg[i]);
+	return (*strarg);
 }
 
 int	ft_check_error(char **strarg)

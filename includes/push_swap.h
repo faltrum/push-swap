@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oseivane <oseivane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: osg <osg@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:23:02 by oseivane          #+#    #+#             */
-/*   Updated: 2023/12/04 14:26:20 by oseivane         ###   ########.fr       */
+/*   Updated: 2023/12/06 19:11:17 by osg              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_stack
 int		main(int argc, char **argv);
 t_stack	*ft_process(int argc, char **argv);
 t_stack	*ft_subprocess(char **argv);
+int		ft_atoi2(const char *str);
 int		ft_check_isrep(char **argv);
 int		ft_check_isalpha(char *argv);
 int		ft_check_error(char **argv);
